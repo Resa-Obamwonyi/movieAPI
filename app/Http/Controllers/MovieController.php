@@ -43,8 +43,8 @@ class MovieController extends Controller
                 return $this->formatApiResponse('Validation error occured', 422, null, $validator->errors());
             }
             $data = Movie::create([
-                'title' => $request->name,
-                'genre' => $request->author,
+                'title' => $request->title,
+                'genre' => $request->genre,
                 'release_date' => $request->release_date,
                 'producer' => $request->producer,
                 'synopsis' => $request->synopsis
